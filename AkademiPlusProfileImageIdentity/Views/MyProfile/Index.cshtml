@@ -1,0 +1,37 @@
+﻿@model UserEditViewModel
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+        <img src="~/userimages/@Model.Image" height="100" width="100" />
+        <label>Adınız</label>
+        <input type="text" class="form-control" asp-for="Name" />
+        <br />
+        <label>Soyadınız</label>
+        <input type="text" class="form-control" asp-for="Surname" />
+        <br />
+        <label>Şehir Bilgisi</label>
+        <input type="text" class="form-control" asp-for="City" />
+        <br />
+        <label>Mail Adresiniz</label>
+        <input type="text" class="form-control" asp-for="Email" />
+        <br />
+        <label>Kullanıcı Adınız</label>
+        <input type="text" class="form-control" asp-for="Username" />
+        <br />
+        <label>Image URl</label>
+        <input type="file" asp-for="ImageFile" />
+        <br />
+        <label>Telefon Numarası</label>
+        <input type="text" class="form-control" asp-for="PhoneNumber" />
+        <br />
+        <label>Şifreniz</label>
+        <input type="text" class="form-control" asp-for="Password" />
+        <br />
+        <button class="btn btn-outline-info">Güncelle</button>
+
+    </form>
+</div>
